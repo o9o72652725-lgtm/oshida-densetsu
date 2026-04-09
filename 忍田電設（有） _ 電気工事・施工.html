@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///C:/Users/user/Downloads/index_12.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>忍田電設（有） | 電気工事・施工</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./忍田電設（有） _ 電気工事・施工_files/css2" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --navy: #0a1628;
+  --navy-mid: #111f3a;
+  --navy-light: #1a2d4d;
+  --electric: #f59e0b;
+  --electric-light: #fbbf24;
+  --electric-glow: rgba(245, 158, 11, 0.15);
+  --white: #f8fafc;
+  --gray-100: #e2e8f0;
+  --gray-200: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-600: #64748b;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --font-jp: 'Noto Sans JP', sans-serif;
+  --font-en: 'Outfit', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-jp);
+  background: var(--navy);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section-label {
+  font-family: var(--font-en);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--electric);
+  margin-bottom: 8px;
+}
+.section-title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+.section-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(245,158,11,0.2); }
+  50% { box-shadow: 0 0 40px rgba(245,158,11,0.4); }
+}
+.fade-up { opacity: 0; animation: fadeUp 0.8s ease forwards; }
+.fade-up-d1 { animation-delay: 0.1s; }
+.fade-up-d2 { animation-delay: 0.2s; }
+.fade-up-d3 { animation-delay: 0.3s; }
+.fade-up-d4 { animation-delay: 0.4s; }
+
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 16px 0;
+  background: rgba(10, 22, 40, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: padding 0.3s;
+}
+header.scrolled { padding: 10px 0; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-icon {
+  width: 38px; height: 38px; background: var(--electric); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; color: var(--navy); font-weight: 800;
+}
+.logo-text { font-weight: 700; font-size: 1.1rem; color: var(--white); letter-spacing: 0.02em; }
+.logo-text span { color: var(--electric); }
+nav { display: flex; align-items: center; gap: 32px; }
+nav a {
+  text-decoration: none; color: var(--gray-400); font-size: 0.85rem;
+  font-weight: 500; transition: color 0.2s; position: relative;
+}
+nav a:hover { color: var(--white); }
+nav a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 100%; height: 2px; background: var(--electric);
+  transform: scaleX(0); transform-origin: left; transition: transform 0.3s;
+}
+nav a:hover::after { transform: scaleX(1); }
+.nav-cta {
+  background: var(--electric); color: var(--navy) !important;
+  padding: 8px 20px; border-radius: 6px; font-weight: 700; font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--electric-light); transform: translateY(-1px); }
+.nav-cta::after { display: none !important; }
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 4px;
+}
+.hamburger span { width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
+
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  position: relative; overflow: hidden; padding-top: 80px;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(10,22,40,0.65) 0%, rgba(10,22,40,0.7) 50%, rgba(17,31,58,0.95) 100%),
+    url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIwIDEwODAiIHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjEwODAiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJza3kiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBhMTYyOCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iIzExMWYzYSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxYTJkNGQiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9Imdsb3cxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmNTllMGIiIHN0b3Atb3BhY2l0eT0iMC4zIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1OWUwYiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJzdGVlbCIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjM2I0ZjZiIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFlMmQ0NSIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic3RlZWxIIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMyYTNkNTciLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjM2I0ZjZiIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJjYWJsZSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjAiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjU5ZTBiIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZmJiZjI0Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1OWUwYiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3dGIj4KICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iNiIgcmVzdWx0PSJibHVyIi8+CiAgICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYmx1ciIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICAgIDwvZmlsdGVyPgogICAgPGZpbHRlciBpZD0iZ2xvd1NtYWxsIj4KICAgICAgPGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMyIgcmVzdWx0PSJibHVyIi8+CiAgICAgIDxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iYmx1ciIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT4KICAgIDwvZmlsdGVyPgogIDwvZGVmcz4KCiAgPCEtLSBCYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHdpZHRoPSIxOTIwIiBoZWlnaHQ9IjEwODAiIGZpbGw9InVybCgjc2t5KSIvPgoKICA8IS0tIEdyaWQgcGF0dGVybiAtLT4KICA8ZyBvcGFjaXR5PSIwLjA0IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMC41Ij4KICAgIDxsaW5lIHgxPSIwIiB5MT0iMjAwIiB4Mj0iMTkyMCIgeTI9IjIwMCIvPgogICAgPGxpbmUgeDE9IjAiIHkxPSI0MDAiIHgyPSIxOTIwIiB5Mj0iNDAwIi8+CiAgICA8bGluZSB4MT0iMCIgeTE9IjYwMCIgeDI9IjE5MjAiIHkyPSI2MDAiLz4KICAgIDxsaW5lIHgxPSIwIiB5MT0iODAwIiB4Mj0iMTkyMCIgeTI9IjgwMCIvPgogICAgPGxpbmUgeDE9IjMyMCIgeTE9IjAiIHgyPSIzMjAiIHkyPSIxMDgwIi8+CiAgICA8bGluZSB4MT0iNjQwIiB5MT0iMCIgeDI9IjY0MCIgeTI9IjEwODAiLz4KICAgIDxsaW5lIHgxPSI5NjAiIHkxPSIwIiB4Mj0iOTYwIiB5Mj0iMTA4MCIvPgogICAgPGxpbmUgeDE9IjEyODAiIHkxPSIwIiB4Mj0iMTI4MCIgeTI9IjEwODAiLz4KICAgIDxsaW5lIHgxPSIxNjAwIiB5MT0iMCIgeDI9IjE2MDAiIHkyPSIxMDgwIi8+CiAgPC9nPgoKICA8IS0tID09PT09PT09IEhJR0gtVk9MVEFHRSBUT1dFUiAocmlnaHQpID09PT09PT09IC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzNTAsIDEwMCkiPgogICAgPCEtLSBUb3dlciBsZWdzIC0tPgogICAgPHBvbHlnb24gcG9pbnRzPSI4MCwwIDYwLDcwMCAyMCw3MDAiIGZpbGw9InVybCgjc3RlZWwpIiBvcGFjaXR5PSIwLjgiLz4KICAgIDxwb2x5Z29uIHBvaW50cz0iODAsMCAxMDAsNzAwIDE0MCw3MDAiIGZpbGw9InVybCgjc3RlZWwpIiBvcGFjaXR5PSIwLjciLz4KICAgIDwhLS0gQ3Jvc3MgYmVhbXMgLS0+CiAgICA8cmVjdCB4PSIzNSIgeT0iMTIwIiB3aWR0aD0iOTAiIGhlaWdodD0iNiIgcng9IjIiIGZpbGw9IiMzYjRmNmIiIG9wYWNpdHk9IjAuNyIvPgogICAgPHJlY3QgeD0iNDIiIHk9IjI0MCIgd2lkdGg9Ijc2IiBoZWlnaHQ9IjYiIHJ4PSIyIiBmaWxsPSIjM2I0ZjZiIiBvcGFjaXR5PSIwLjciLz4KICAgIDxyZWN0IHg9IjQ4IiB5PSIzNjAiIHdpZHRoPSI2NCIgaGVpZ2h0PSI2IiByeD0iMiIgZmlsbD0iIzNiNGY2YiIgb3BhY2l0eT0iMC43Ii8+CiAgICA8cmVjdCB4PSI1MiIgeT0iNDgwIiB3aWR0aD0iNTYiIGhlaWdodD0iNiIgcng9IjIiIGZpbGw9IiMzYjRmNmIiIG9wYWNpdHk9IjAuNyIvPgogICAgPCEtLSBBcm1zIC0tPgogICAgPHJlY3QgeD0iLTMwIiB5PSIxMTAiIHdpZHRoPSIyMjAiIGhlaWdodD0iOCIgcng9IjMiIGZpbGw9IiMzYjRmNmIiIG9wYWNpdHk9IjAuOCIvPgogICAgPHJlY3QgeD0iLTEwIiB5PSIyMzAiIHdpZHRoPSIxODAiIGhlaWdodD0iNyIgcng9IjMiIGZpbGw9IiMzYjRmNmIiIG9wYWNpdHk9IjAuNyIvPgogICAgPCEtLSBJbnN1bGF0b3JzIC0tPgogICAgPGcgZmlsbD0iIzRhNjA4MCIgb3BhY2l0eT0iMC45Ij4KICAgICAgPHJlY3QgeD0iLTI1IiB5PSIxMTgiIHdpZHRoPSI4IiBoZWlnaHQ9IjMwIiByeD0iMyIvPgogICAgICA8cmVjdCB4PSIxNzUiIHk9IjExOCIgd2lkdGg9IjgiIGhlaWdodD0iMzAiIHJ4PSIzIi8+CiAgICAgIDxyZWN0IHg9Ii01IiB5PSIyMzciIHdpZHRoPSI3IiBoZWlnaHQ9IjI1IiByeD0iMyIvPgogICAgICA8cmVjdCB4PSIxNTgiIHk9IjIzNyIgd2lkdGg9IjciIGhlaWdodD0iMjUiIHJ4PSIzIi8+CiAgICA8L2c+CiAgICA8IS0tIFBvd2VyIGxpbmVzIGdsb3cgLS0+CiAgICA8ZyBmaWx0ZXI9InVybCgjZ2xvd0YpIj4KICAgICAgPGxpbmUgeDE9Ii0yMDAiIHkxPSIxNDgiIHgyPSItMjkiIHkyPSIxNDgiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjUiLz4KICAgICAgPGxpbmUgeDE9IjE4MyIgeTE9IjE0OCIgeDI9IjUwMCIgeTI9IjE0OCIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuNSIvPgogICAgICA8bGluZSB4MT0iLTE1MCIgeTE9IjI2MiIgeDI9Ii0yIiB5Mj0iMjYyIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjQiLz4KICAgICAgPGxpbmUgeDE9IjE2NSIgeTE9IjI2MiIgeDI9IjQ1MCIgeTI9IjI2MiIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC40Ii8+CiAgICA8L2c+CiAgICA8IS0tIFNwYXJrIGVmZmVjdHMgLS0+CiAgICA8Y2lyY2xlIGN4PSItMjUiIGN5PSIxNDgiIHI9IjQiIGZpbGw9IiNmYmJmMjQiIG9wYWNpdHk9IjAuNiIgZmlsdGVyPSJ1cmwoI2dsb3dTbWFsbCkiLz4KICAgIDxjaXJjbGUgY3g9IjE4MyIgY3k9IjE0OCIgcj0iNCIgZmlsbD0iI2ZiYmYyNCIgb3BhY2l0eT0iMC42IiBmaWx0ZXI9InVybCgjZ2xvd1NtYWxsKSIvPgogIDwvZz4KCiAgPCEtLSA9PT09PT09PSBDVUJJQ0xFIC8gVFJBTlNGT1JNRVIgKGNlbnRlci1yaWdodCkgPT09PT09PT0gLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTA1MCwgNDgwKSI+CiAgICA8IS0tIE1haW4gYm94IC0tPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSIyODAiIHJ4PSI0IiBmaWxsPSJ1cmwoI3N0ZWVsKSIgc3Ryb2tlPSIjNGE2MDgwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPCEtLSBEb29yIGxpbmVzIC0tPgogICAgPGxpbmUgeDE9IjkwIiB5MT0iMTAiIHgyPSI5MCIgeTI9IjI3MCIgc3Ryb2tlPSIjNGE2MDgwIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuNSIvPgogICAgPCEtLSBWZW50aWxhdGlvbiBncmlsbHMgLS0+CiAgICA8ZyBzdHJva2U9IiM0YTYwODAiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC40Ij4KICAgICAgPGxpbmUgeDE9IjIwIiB5MT0iMzAiIHgyPSI3MCIgeTI9IjMwIi8+CiAgICAgIDxsaW5lIHgxPSIyMCIgeTE9IjM4IiB4Mj0iNzAiIHkyPSIzOCIvPgogICAgICA8bGluZSB4MT0iMjAiIHkxPSI0NiIgeDI9IjcwIiB5Mj0iNDYiLz4KICAgICAgPGxpbmUgeDE9IjExMCIgeTE9IjMwIiB4Mj0iMTYwIiB5Mj0iMzAiLz4KICAgICAgPGxpbmUgeDE9IjExMCIgeTE9IjM4IiB4Mj0iMTYwIiB5Mj0iMzgiLz4KICAgICAgPGxpbmUgeDE9IjExMCIgeTE9IjQ2IiB4Mj0iMTYwIiB5Mj0iNDYiLz4KICAgIDwvZz4KICAgIDwhLS0gTWV0ZXJzIC0tPgogICAgPGNpcmNsZSBjeD0iNDUiIGN5PSI5MCIgcj0iMTYiIGZpbGw9IiMxMTFmM2EiIHN0cm9rZT0iIzRhNjA4MCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICAgIDxjaXJjbGUgY3g9IjEzNSIgY3k9IjkwIiByPSIxNiIgZmlsbD0iIzExMWYzYSIgc3Ryb2tlPSIjNGE2MDgwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPCEtLSBNZXRlciBuZWVkbGVzIC0tPgogICAgPGxpbmUgeDE9IjQ1IiB5MT0iOTAiIHgyPSI1NSIgeTI9IjgwIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICA8bGluZSB4MT0iMTM1IiB5MT0iOTAiIHgyPSIxNDUiIHkyPSI4MiIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPCEtLSBJbmRpY2F0b3IgbGlnaHRzIC0tPgogICAgPGNpcmNsZSBjeD0iNDUiIGN5PSIxNDAiIHI9IjUiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuOCIgZmlsdGVyPSJ1cmwoI2dsb3dTbWFsbCkiLz4KICAgIDxjaXJjbGUgY3g9IjkwIiBjeT0iMTQwIiByPSI1IiBmaWxsPSIjZjU5ZTBiIiBvcGFjaXR5PSIwLjgiIGZpbHRlcj0idXJsKCNnbG93U21hbGwpIi8+CiAgICA8Y2lyY2xlIGN4PSIxMzUiIGN5PSIxNDAiIHI9IjUiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuOCIgZmlsdGVyPSJ1cmwoI2dsb3dTbWFsbCkiLz4KICAgIDwhLS0gSGFuZGxlIC0tPgogICAgPHJlY3QgeD0iODIiIHk9IjE4MCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjUwIiByeD0iMyIgZmlsbD0iIzRhNjA4MCIvPgogICAgPCEtLSBXYXJuaW5nIHNpZ24gLS0+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2NSwgMjUwKSI+CiAgICAgIDxwb2x5Z29uIHBvaW50cz0iMjUsMCA1MCw0MCAwLDQwIiBmaWxsPSIjZjU5ZTBiIiBvcGFjaXR5PSIwLjciLz4KICAgICAgPHRleHQgeD0iMjUiIHk9IjMyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iIzBhMTYyOCI+4pqhPC90ZXh0PgogICAgPC9nPgogICAgPCEtLSBDYWJsZXMgY29taW5nIG91dCB0b3AgLS0+CiAgICA8ZyBmaWx0ZXI9InVybCgjZ2xvd1NtYWxsKSI+CiAgICAgIDxwYXRoIGQ9Ik00NSwtMTAgUTQ1LC00MCAzMCwtNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIwLjUiLz4KICAgICAgPHBhdGggZD0iTTkwLC0xMCBROTAsLTUwIDkwLC03MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuNSIvPgogICAgICA8cGF0aCBkPSJNMTM1LC0xMCBRMTM1LC00MCAxNTAsLTYwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC41Ii8+CiAgICA8L2c+CiAgPC9nPgoKICA8IS0tID09PT09PT09IENPTlRST0wgUEFORUwgKGxlZnQtY2VudGVyKSA9PT09PT09PSAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMDAsIDQwMCkiPgogICAgPCEtLSBQYW5lbCBib2R5IC0tPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSIzNTAiIHJ4PSI2IiBmaWxsPSJ1cmwoI3N0ZWVsKSIgc3Ryb2tlPSIjNGE2MDgwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPCEtLSBTY3JlZW4gLS0+CiAgICA8cmVjdCB4PSIyMCIgeT0iMjAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIiByeD0iNCIgZmlsbD0iIzBhMTYyOCIgc3Ryb2tlPSIjMmEzZDU3IiBzdHJva2Utd2lkdGg9IjEiLz4KICAgIDwhLS0gU2NyZWVuIGNvbnRlbnQgLSB3YXZlZm9ybSAtLT4KICAgIDxwb2x5bGluZSBwb2ludHM9IjMwLDcwIDUwLDUwIDcwLDgwIDkwLDQ1IDExMCw3NSAxMzAsNDAgMTUwLDcwIDE3MCw1NSAxOTAsNjUgMjEwLDUwIiAKICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjJjNTVlIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuNyIvPgogICAgPHBvbHlsaW5lIHBvaW50cz0iMzAsODUgNjAsNzggOTAsODIgMTIwLDc2IDE1MCw4NCAxODAsNzQgMjEwLDgwIiAKICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC41Ii8+CiAgICA8IS0tIEJ1dHRvbiByb3dzIC0tPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAsIDE0MCkiPgogICAgICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHJ4PSI0IiBmaWxsPSIjMWUyZDQ1IiBzdHJva2U9IiM0YTYwODAiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgICA8cmVjdCB4PSI0MCIgeT0iMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiByeD0iNCIgZmlsbD0iIzFlMmQ0NSIgc3Ryb2tlPSIjNGE2MDgwIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgICAgPHJlY3QgeD0iODAiIHk9IjAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgcng9IjQiIGZpbGw9IiMxZTJkNDUiIHN0cm9rZT0iIzRhNjA4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICAgIDxyZWN0IHg9IjEyMCIgeT0iMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiByeD0iNCIgZmlsbD0iIzFlMmQ0NSIgc3Ryb2tlPSIjNGE2MDgwIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgICAgPHJlY3QgeD0iMTYwIiB5PSIwIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHJ4PSI0IiBmaWxsPSIjMWUyZDQ1IiBzdHJva2U9IiM0YTYwODAiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPC9nPgogICAgPCEtLSBUb2dnbGUgc3dpdGNoZXMgLS0+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMCwgMTkwKSI+CiAgICAgIDxyZWN0IHg9IjUiIHk9IjAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIyNCIgcng9IjUiIGZpbGw9IiMyYTNkNTciLz4KICAgICAgPGNpcmNsZSBjeD0iMTAiIGN5PSI4IiByPSI2IiBmaWxsPSIjMjJjNTVlIiBmaWx0ZXI9InVybCgjZ2xvd1NtYWxsKSIvPgogICAgICA8cmVjdCB4PSI0NSIgeT0iMCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjI0IiByeD0iNSIgZmlsbD0iIzJhM2Q1NyIvPgogICAgICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjgiIHI9IjYiIGZpbGw9IiMyMmM1NWUiIGZpbHRlcj0idXJsKCNnbG93U21hbGwpIi8+CiAgICAgIDxyZWN0IHg9Ijg1IiB5PSIwIiB3aWR0aD0iMTAiIGhlaWdodD0iMjQiIHJ4PSI1IiBmaWxsPSIjMmEzZDU3Ii8+CiAgICAgIDxjaXJjbGUgY3g9IjkwIiBjeT0iMTYiIHI9IjYiIGZpbGw9IiNlZjQ0NDQiIGZpbHRlcj0idXJsKCNnbG93U21hbGwpIi8+CiAgICAgIDxyZWN0IHg9IjEyNSIgeT0iMCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjI0IiByeD0iNSIgZmlsbD0iIzJhM2Q1NyIvPgogICAgICA8Y2lyY2xlIGN4PSIxMzAiIGN5PSI4IiByPSI2IiBmaWxsPSIjMjJjNTVlIiBmaWx0ZXI9InVybCgjZ2xvd1NtYWxsKSIvPgogICAgPC9nPgogICAgPCEtLSBCcmVha2VycyAtLT4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIwLCAyNDApIj4KICAgICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjYwIiByeD0iMyIgZmlsbD0iIzFlMmQ0NSIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgICAgPHJlY3QgeD0iNTAiIHk9IjAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI2MCIgcng9IjMiIGZpbGw9IiMxZTJkNDUiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICAgIDxyZWN0IHg9IjEwMCIgeT0iMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjYwIiByeD0iMyIgZmlsbD0iIzFlMmQ0NSIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjEiLz4KICAgICAgPHJlY3QgeD0iMTUwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNjAiIHJ4PSIzIiBmaWxsPSIjMWUyZDQ1IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgICA8IS0tIEJyZWFrZXIgaGFuZGxlcyAtLT4KICAgICAgPHJlY3QgeD0iMTQiIHk9IjE1IiB3aWR0aD0iMTIiIGhlaWdodD0iMjAiIHJ4PSIyIiBmaWxsPSIjNGE2MDgwIi8+CiAgICAgIDxyZWN0IHg9IjY0IiB5PSIxNSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjIwIiByeD0iMiIgZmlsbD0iIzRhNjA4MCIvPgogICAgICA8cmVjdCB4PSIxMTQiIHk9IjI1IiB3aWR0aD0iMTIiIGhlaWdodD0iMjAiIHJ4PSIyIiBmaWxsPSIjNGE2MDgwIi8+CiAgICAgIDxyZWN0IHg9IjE2NCIgeT0iMTUiIHdpZHRoPSIxMiIgaGVpZ2h0PSIyMCIgcng9IjIiIGZpbGw9IiM0YTYwODAiLz4KICAgIDwvZz4KICAgIDwhLS0gQ2FibGUgdHJheSBib3R0b20gLS0+CiAgICA8ZyBmaWx0ZXI9InVybCgjZ2xvd1NtYWxsKSI+CiAgICAgIDxwYXRoIGQ9Ik0zMCwzNTAgUTMwLDM4MCAxMCw0MDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIzIiBvcGFjaXR5PSIwLjQiLz4KICAgICAgPHBhdGggZD0iTTEyMCwzNTAgUTEyMCwzOTAgMTIwLDQyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuNCIvPgogICAgICA8cGF0aCBkPSJNMjEwLDM1MCBRMjEwLDM4MCAyMzAsNDAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC40Ii8+CiAgICA8L2c+CiAgPC9nPgoKICA8IS0tID09PT09PT09IENPTkRVSVQgJiBDQUJMRSBUUkFZUyAoYm90dG9tKSA9PT09PT09PSAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCA4NTApIiBvcGFjaXR5PSIwLjUiPgogICAgPCEtLSBDYWJsZSB0cmF5IC0tPgogICAgPHJlY3QgeD0iMTAwIiB5PSIwIiB3aWR0aD0iMTcyMCIgaGVpZ2h0PSIxMiIgcng9IjIiIGZpbGw9IiMyYTNkNTciLz4KICAgIDxyZWN0IHg9IjEwMCIgeT0iMzAiIHdpZHRoPSIxNzIwIiBoZWlnaHQ9IjEyIiByeD0iMiIgZmlsbD0iIzJhM2Q1NyIvPgogICAgPCEtLSBDYWJsZXMgaW5zaWRlIC0tPgogICAgPGcgZmlsdGVyPSJ1cmwoI2dsb3dTbWFsbCkiPgogICAgICA8bGluZSB4MT0iMTAwIiB5MT0iNiIgeDI9IjE4MjAiIHkyPSI2IiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4zIi8+CiAgICAgIDxsaW5lIHgxPSIxMDAiIHkxPSIzNiIgeDI9IjE4MjAiIHkyPSIzNiIgc3Ryb2tlPSIjMjJjNTVlIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuMiIvPgogICAgPC9nPgogICAgPCEtLSBDb25kdWl0IHN1cHBvcnRzIC0tPgogICAgPHJlY3QgeD0iMzAwIiB5PSItMjAiIHdpZHRoPSI4IiBoZWlnaHQ9IjcwIiByeD0iMiIgZmlsbD0iIzNiNGY2YiIvPgogICAgPHJlY3QgeD0iNjAwIiB5PSItMjAiIHdpZHRoPSI4IiBoZWlnaHQ9IjcwIiByeD0iMiIgZmlsbD0iIzNiNGY2YiIvPgogICAgPHJlY3QgeD0iOTAwIiB5PSItMjAiIHdpZHRoPSI4IiBoZWlnaHQ9IjcwIiByeD0iMiIgZmlsbD0iIzNiNGY2YiIvPgogICAgPHJlY3QgeD0iMTIwMCIgeT0iLTIwIiB3aWR0aD0iOCIgaGVpZ2h0PSI3MCIgcng9IjIiIGZpbGw9IiMzYjRmNmIiLz4KICAgIDxyZWN0IHg9IjE1MDAiIHk9Ii0yMCIgd2lkdGg9IjgiIGhlaWdodD0iNzAiIHJ4PSIyIiBmaWxsPSIjM2I0ZjZiIi8+CiAgPC9nPgoKICA8IS0tID09PT09PT09IEZMT0FUSU5HIENJUkNVSVQgRUxFTUVOVFMgPT09PT09PT0gLS0+CiAgPCEtLSBSZXNpc3RvciBzeW1ib2wgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzAwLCAyMDApIiBvcGFjaXR5PSIwLjEyIj4KICAgIDxwb2x5bGluZSBwb2ludHM9IjAsMCAxMCwtMjAgMzAsMjAgNTAsLTIwIDcwLDIwIDkwLC0yMCAxMDAsMCIgCiAgICAgIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8bGluZSB4MT0iLTMwIiB5MT0iMCIgeDI9IjAiIHkyPSIwIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPGxpbmUgeDE9IjEwMCIgeTE9IjAiIHgyPSIxMzAiIHkyPSIwIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMyIvPgogIDwvZz4KCiAgPCEtLSBDYXBhY2l0b3Igc3ltYm9sIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDU1MCwgMzUwKSIgb3BhY2l0eT0iMC4xIj4KICAgIDxsaW5lIHgxPSIwIiB5MT0iMzAiIHgyPSIzMCIgeTI9IjMwIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPGxpbmUgeDE9IjMwIiB5MT0iMCIgeDI9IjMwIiB5Mj0iNjAiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8bGluZSB4MT0iNDUiIHkxPSIwIiB4Mj0iNDUiIHkyPSI2MCIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDxsaW5lIHgxPSI0NSIgeTE9IjMwIiB4Mj0iNzUiIHkyPSIzMCIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8L2c+CgogIDwhLS0gR3JvdW5kIHN5bWJvbCAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4NTAsIDcwMCkiIG9wYWNpdHk9IjAuMSI+CiAgICA8bGluZSB4MT0iMzAiIHkxPSIwIiB4Mj0iMzAiIHkyPSIyMCIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDxsaW5lIHgxPSIxMCIgeTE9IjIwIiB4Mj0iNTAiIHkyPSIyMCIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDxsaW5lIHgxPSIxNiIgeTE9IjMwIiB4Mj0iNDQiIHkyPSIzMCIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjMiLz4KICAgIDxsaW5lIHgxPSIyMiIgeTE9IjQwIiB4Mj0iMzgiIHkyPSI0MCIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8L2c+CgogIDwhLS0gPT09PT09PT0gU1BBUksgLyBFTkVSR1kgRUZGRUNUUyA9PT09PT09PSAtLT4KICA8ZyBmaWx0ZXI9InVybCgjZ2xvd0YpIj4KICAgIDwhLS0gTGlnaHRuaW5nIGJvbHQgMSAtLT4KICAgIDxwb2x5Z29uIHBvaW50cz0iOTYwLDgwIDk3MCwxMjAgOTgwLDExNSA5NzUsMTYwIiBmaWxsPSIjZjU5ZTBiIiBvcGFjaXR5PSIwLjE1Ii8+CiAgICA8IS0tIExpZ2h0bmluZyBib2x0IDIgLS0+CiAgICA8cG9seWdvbiBwb2ludHM9IjE2MDAsMjAwIDE2MDgsMjMwIDE2MTUsMjI2IDE2MTIsMjYwIiBmaWxsPSIjZmJiZjI0IiBvcGFjaXR5PSIwLjEyIi8+CiAgICA8IS0tIFNtYWxsIHNwYXJrcyAtLT4KICAgIDxjaXJjbGUgY3g9IjY4MCIgY3k9IjE1MCIgcj0iMiIgZmlsbD0iI2Y1OWUwYiIgb3BhY2l0eT0iMC40Ii8+CiAgICA8Y2lyY2xlIGN4PSIxMTAwIiBjeT0iMzAwIiByPSIyIiBmaWxsPSIjZmJiZjI0IiBvcGFjaXR5PSIwLjMiLz4KICAgIDxjaXJjbGUgY3g9IjUwMCIgY3k9IjI1MCIgcj0iMS41IiBmaWxsPSIjZjU5ZTBiIiBvcGFjaXR5PSIwLjM1Ii8+CiAgICA8Y2lyY2xlIGN4PSIxNTAwIiBjeT0iNTAwIiByPSIyIiBmaWxsPSIjZjU5ZTBiIiBvcGFjaXR5PSIwLjMiLz4KICAgIDxjaXJjbGUgY3g9IjgwMCIgY3k9IjYwMCIgcj0iMS41IiBmaWxsPSIjZmJiZjI0IiBvcGFjaXR5PSIwLjI1Ii8+CiAgPC9nPgoKICA8IS0tID09PT09PT09IEZMT09SIC8gR1JPVU5EID09PT09PT09IC0tPgogIDxyZWN0IHg9IjAiIHk9IjkwMCIgd2lkdGg9IjE5MjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjMGExNjI4IiBvcGFjaXR5PSIwLjUiLz4KICA8bGluZSB4MT0iMCIgeTE9IjkwMCIgeDI9IjE5MjAiIHkyPSI5MDAiIHN0cm9rZT0iIzJhM2Q1NyIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjMiLz4KPC9zdmc+Cg==') center/cover no-repeat;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 30%, transparent 70%);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.hero-text-area { max-width: 560px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--electric-glow); border: 1px solid rgba(245,158,11,0.25);
+  padding: 6px 14px; border-radius: 100px;
+  font-size: 0.78rem; font-weight: 500; color: var(--electric); margin-bottom: 24px;
+}
+.hero-badge::before {
+  content: ''; width: 6px; height: 6px; background: var(--electric);
+  border-radius: 50%; animation: pulse-glow 2s infinite;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900;
+  line-height: 1.3; margin-bottom: 20px; letter-spacing: -0.02em;
+}
+.hero h1 .accent { color: var(--electric); }
+.hero-desc { color: var(--text-muted); font-size: 1rem; line-height: 1.9; margin-bottom: 36px; }
+.hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--electric); color: var(--navy);
+  padding: 14px 28px; border-radius: 8px; font-weight: 700; font-size: 0.95rem;
+  text-decoration: none; transition: all 0.25s; border: none; cursor: pointer;
+}
+.btn-primary:hover { background: var(--electric-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.25); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: var(--white);
+  padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 0.95rem;
+  text-decoration: none; border: 1px solid rgba(255,255,255,0.15); transition: all 0.25s;
+}
+.btn-secondary:hover { border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.05); }
+
+.hero-visual { position: relative; display: flex; justify-content: center; align-items: center; }
+.hero-card {
+  background: var(--navy-light); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px; padding: 32px; width: 100%; max-width: 420px;
+  position: relative; overflow: hidden;
+}
+.hero-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--electric), var(--electric-light), var(--electric));
+}
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+.stat-item { text-align: center; }
+.stat-number { font-family: var(--font-en); font-size: 2.2rem; font-weight: 800; color: var(--electric); line-height: 1; }
+.stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 6px; }
+.cert-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.cert-tag {
+  background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.2);
+  padding: 5px 12px; border-radius: 6px; font-size: 0.72rem; color: var(--electric-light); font-weight: 500;
+}
+.partner-badge {
+  margin-top: 20px; padding: 12px 16px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px; display: flex; align-items: center; gap: 12px;
+  font-size: 0.82rem; color: var(--text-muted);
+}
+.partner-badge strong { color: var(--white); font-weight: 700; font-size: 0.95rem; }
+
+.marquee-section {
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden; background: var(--navy-mid);
+}
+.marquee-track { display: flex; gap: 48px; animation: marquee 30s linear infinite; width: max-content; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.marquee-item {
+  font-family: var(--font-en); font-size: 0.8rem; font-weight: 500;
+  color: var(--gray-600); letter-spacing: 0.1em; text-transform: uppercase;
+  white-space: nowrap; display: flex; align-items: center; gap: 12px;
+}
+.marquee-item::before { content: '\26A1'; font-size: 0.7rem; }
+
+.services { padding: 100px 0; }
+.services-header { text-align: center; margin-bottom: 60px; }
+.services-header .section-desc { margin: 0 auto; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.service-card {
+  background: var(--navy-mid); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px; padding: 32px 28px; transition: all 0.35s;
+  position: relative; overflow: hidden;
+}
+.service-card::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, rgba(245,158,11,0.05) 0%, transparent 60%);
+  opacity: 0; transition: opacity 0.35s;
+}
+.service-card:hover { border-color: rgba(245,158,11,0.2); transform: translateY(-4px); }
+.service-card:hover::before { opacity: 1; }
+.service-icon {
+  width: 48px; height: 48px; background: var(--electric-glow); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; margin-bottom: 20px; position: relative;
+}
+.service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; position: relative; }
+.service-card p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; position: relative; }
+.service-img {
+  width: 100%; height: 140px; border-radius: 8px; margin-bottom: 16px;
+  object-fit: cover; display: block; position: relative;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.why-us { padding: 100px 0; background: var(--navy-mid); }
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.why-list { display: flex; flex-direction: column; gap: 24px; }
+.why-item {
+  display: flex; gap: 16px; padding: 20px; border-radius: 12px;
+  border: 1px solid transparent; transition: all 0.3s;
+}
+.why-item:hover { background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.06); }
+.why-num { font-family: var(--font-en); font-size: 1.6rem; font-weight: 800; color: var(--electric); line-height: 1; min-width: 36px; }
+.why-item h4 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+.why-item p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+.why-gallery {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px;
+}
+.why-gallery img {
+  width: 100%; height: 130px; object-fit: cover; border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06); transition: transform 0.3s;
+}
+.why-gallery img:hover { transform: scale(1.03); }
+
+/* ─── Recruit ─── */
+.recruit { padding: 100px 0; }
+.recruit-header { text-align: center; margin-bottom: 60px; }
+.recruit-header .section-desc { margin: 0 auto; }
+.recruit-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.recruit-message {
+  background: var(--navy-mid); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px; padding: 36px; position: relative; overflow: hidden;
+}
+.recruit-message::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--electric), var(--electric-light));
+}
+.recruit-message h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; }
+.recruit-message p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 12px; }
+.recruit-points { margin-top: 20px; display: flex; flex-direction: column; gap: 12px; }
+.recruit-point { display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--text); }
+.recruit-point-icon {
+  width: 28px; height: 28px; background: var(--electric-glow); border-radius: 6px;
+  display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0;
+}
+.recruit-table {
+  background: var(--navy-mid); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; overflow: hidden;
+}
+.recruit-table-row {
+  display: grid; grid-template-columns: 120px 1fr;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.recruit-table-row:last-child { border-bottom: none; }
+.recruit-table-label {
+  padding: 16px 20px; background: rgba(245,158,11,0.05);
+  font-size: 0.82rem; font-weight: 700; color: var(--electric-light);
+  display: flex; align-items: center;
+}
+.recruit-table-value { padding: 16px 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+
+.cta-section { padding: 80px 0; background: var(--navy-mid); }
+.cta-box {
+  background: linear-gradient(135deg, var(--navy-light) 0%, rgba(26,45,77,0.8) 100%);
+  border: 1px solid rgba(245,158,11,0.15); border-radius: 20px;
+  padding: 60px; text-align: center; position: relative; overflow: hidden;
+}
+.cta-box::before {
+  content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(245,158,11,0.06) 0%, transparent 50%);
+}
+.cta-box h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; margin-bottom: 12px; position: relative; }
+.cta-box p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 32px; position: relative; }
+.cta-contacts { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; position: relative; }
+.cta-contact-item { display: flex; align-items: center; gap: 12px; }
+.cta-contact-icon {
+  width: 44px; height: 44px; background: var(--electric); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+.cta-contact-label { font-size: 0.75rem; color: var(--text-muted); }
+.cta-contact-value { font-family: var(--font-en); font-size: 1.2rem; font-weight: 700; color: var(--white); }
+
+footer { padding: 60px 0 30px; border-top: 1px solid rgba(255,255,255,0.05); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-brand p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; margin-top: 12px; max-width: 280px; }
+.footer-col h5 { font-size: 0.8rem; font-weight: 700; color: var(--white); margin-bottom: 16px; letter-spacing: 0.05em; }
+.footer-col a { display: block; font-size: 0.82rem; color: var(--gray-400); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+.footer-col a:hover { color: var(--electric); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.05); padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 0.75rem; color: var(--gray-600);
+}
+
+@media (max-width: 900px) {
+  nav { display: none; }
+  .hamburger { display: flex; }
+  .hero-content { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { display: none; }
+  .services-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .recruit-content { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .cta-box { padding: 40px 24px; }
+}
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .cta-contacts { flex-direction: column; align-items: center; }
+  .recruit-table-row { grid-template-columns: 100px 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header id="header" class="">
+  <div class="container nav-inner">
+    <a href="file:///C:/Users/user/Downloads/index_12.html#" class="logo">
+      <div class="logo-icon">忍</div>
+      <div class="logo-text">忍田<span>電設</span></div>
+    </a>
+    <nav>
+      <a href="file:///C:/Users/user/Downloads/index_12.html#services">事業内容</a>
+      <a href="file:///C:/Users/user/Downloads/index_12.html#why-us">当社の強み</a>
+      <a href="file:///C:/Users/user/Downloads/index_12.html#recruit">採用情報</a>
+      <a href="file:///C:/Users/user/Downloads/index_12.html#contact" class="nav-cta">お問い合わせ</a>
+    </nav>
+    <button class="hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="container hero-content">
+    <div class="hero-text-area">
+      <div class="hero-badge fade-up">TOSHIBA協力会社</div>
+      <h1 class="fade-up fade-up-d1">
+        確かな技術で<br><span class="accent">産業インフラ</span>を<br>支えます
+      </h1>
+      <p class="hero-desc fade-up fade-up-d2">
+        東芝グループの協力会社として、工場・ビル・商業施設の<br>
+        電気設備工事を担う専門施工会社です。<br>
+        有資格者による安全・確実な施工をお約束いたします。
+      </p>
+      <div class="hero-buttons fade-up fade-up-d3">
+        <a href="file:///C:/Users/user/Downloads/index_12.html#recruit" class="btn-primary">採用情報を見る →</a>
+        <a href="file:///C:/Users/user/Downloads/index_12.html#services" class="btn-secondary">事業内容</a>
+      </div>
+    </div>
+    <div class="hero-visual fade-up fade-up-d4">
+      <div class="hero-card">
+        <div class="stat-grid">
+          <div class="stat-item">
+            <div class="stat-number">25</div>
+            <div class="stat-label">年の施工実績</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3,200+</div>
+            <div class="stat-label">累計施工件数</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">安全施工達成率</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">40+</div>
+            <div class="stat-label">有資格技術者</div>
+          </div>
+        </div>
+        <div class="cert-row">
+          <span class="cert-tag">第一種電気工事士</span>
+          <span class="cert-tag">1級電気工事施工管理技士</span>
+          <span class="cert-tag">ISO 9001</span>
+        </div>
+        <div class="partner-badge">
+          <span style="font-size:20px;">🤝</span>
+          <div><strong>TOSHIBA</strong> 協力会社</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">工場電気設備工事</span>
+    <span class="marquee-item">受変電設備</span>
+    <span class="marquee-item">動力設備工事</span>
+    <span class="marquee-item">制御盤・計装工事</span>
+    <span class="marquee-item">高圧受電設備</span>
+    <span class="marquee-item">空調・換気設備</span>
+    <span class="marquee-item">照明設備工事</span>
+    <span class="marquee-item">LAN・通信工事</span>
+    <span class="marquee-item">工場電気設備工事</span>
+    <span class="marquee-item">受変電設備</span>
+    <span class="marquee-item">動力設備工事</span>
+    <span class="marquee-item">制御盤・計装工事</span>
+    <span class="marquee-item">高圧受電設備</span>
+    <span class="marquee-item">空調・換気設備</span>
+    <span class="marquee-item">照明設備工事</span>
+    <span class="marquee-item">LAN・通信工事</span>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <div class="section-label">Services</div>
+      <h2 class="section-title">事業内容</h2>
+      <p class="section-desc">東芝グループの協力会社として、産業・商業施設の電気設備工事を幅広く手がけています。</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzExMWYzYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMmQ0ZCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJnIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIzIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gRmFjdG9yeSBidWlsZGluZyAtLT4KICA8cmVjdCB4PSI0MCIgeT0iNjAiIHdpZHRoPSIxNjAiIGhlaWdodD0iMTIwIiByeD0iMyIgZmlsbD0iIzFlMmQ0NSIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8cmVjdCB4PSIyMTAiIHk9IjQwIiB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE0MCIgcng9IjMiIGZpbGw9IiMxZTJkNDUiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPCEtLSBXaW5kb3dzIC0tPgogIDxnIGZpbGw9IiMwYTE2MjgiIHN0cm9rZT0iIzJhM2Q1NyIgc3Ryb2tlLXdpZHRoPSIwLjUiPgogICAgPHJlY3QgeD0iNTUiIHk9IjgwIiB3aWR0aD0iMjUiIGhlaWdodD0iMzAiIHJ4PSIyIi8+PHJlY3QgeD0iOTAiIHk9IjgwIiB3aWR0aD0iMjUiIGhlaWdodD0iMzAiIHJ4PSIyIi8+CiAgICA8cmVjdCB4PSIxMjUiIHk9IjgwIiB3aWR0aD0iMjUiIGhlaWdodD0iMzAiIHJ4PSIyIi8+PHJlY3QgeD0iMTYwIiB5PSI4MCIgd2lkdGg9IjI1IiBoZWlnaHQ9IjMwIiByeD0iMiIvPgogICAgPHJlY3QgeD0iNTUiIHk9IjEyNSIgd2lkdGg9IjI1IiBoZWlnaHQ9IjMwIiByeD0iMiIvPjxyZWN0IHg9IjkwIiB5PSIxMjUiIHdpZHRoPSIyNSIgaGVpZ2h0PSIzMCIgcng9IjIiLz4KICAgIDxyZWN0IHg9IjIyNSIgeT0iNjAiIHdpZHRoPSIyNSIgaGVpZ2h0PSIzMCIgcng9IjIiLz48cmVjdCB4PSIyNjAiIHk9IjYwIiB3aWR0aD0iMjUiIGhlaWdodD0iMzAiIHJ4PSIyIi8+CiAgICA8cmVjdCB4PSIyOTUiIHk9IjYwIiB3aWR0aD0iMjUiIGhlaWdodD0iMzAiIHJ4PSIyIi8+PHJlY3QgeD0iMzMwIiB5PSI2MCIgd2lkdGg9IjI1IiBoZWlnaHQ9IjMwIiByeD0iMiIvPgogIDwvZz4KICA8IS0tIFdpbmRvdyBsaWdodHMgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI2cpIiBvcGFjaXR5PSIwLjQiPgogICAgPHJlY3QgeD0iNTYiIHk9IjgxIiB3aWR0aD0iMjMiIGhlaWdodD0iMjgiIHJ4PSIxIiBmaWxsPSIjZjU5ZTBiIiBvcGFjaXR5PSIwLjMiLz4KICAgIDxyZWN0IHg9IjIyNiIgeT0iNjEiIHdpZHRoPSIyMyIgaGVpZ2h0PSIyOCIgcng9IjEiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuMyIvPgogICAgPHJlY3QgeD0iMjk2IiB5PSI2MSIgd2lkdGg9IjIzIiBoZWlnaHQ9IjI4IiByeD0iMSIgZmlsbD0iI2Y1OWUwYiIgb3BhY2l0eT0iMC4zIi8+CiAgPC9nPgogIDwhLS0gUG93ZXIgbGluZXMgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI2cpIj48bGluZSB4MT0iMCIgeTE9IjMwIiB4Mj0iNDAwIiB5Mj0iMzAiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuMyIvPjwvZz4KICA8IS0tIENoaW1uZXkgLS0+CiAgPHJlY3QgeD0iMjMwIiB5PSIxNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjI1IiBmaWxsPSIjMmEzZDU3Ii8+Cjwvc3ZnPgo=" alt="工場電気設備工事" class="service-img">
+        <div class="service-icon">🏭</div>
+        <h3>工場電気設備工事</h3>
+        <p>製造ライン、動力設備、制御盤など、工場の電気インフラを設計から施工、保守まで一貫対応します。</p>
+      </div>
+      <div class="service-card" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzExMWYzYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMmQ0ZCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJnIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIzIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gQ3ViaWNsZSBib3ggLS0+CiAgPHJlY3QgeD0iMTIwIiB5PSIzMCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIxNTAiIHJ4PSI0IiBmaWxsPSIjMWUyZDQ1IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjIwMCIgeTE9IjM1IiB4Mj0iMjAwIiB5Mj0iMTc1IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMC44IiBvcGFjaXR5PSIwLjUiLz4KICA8IS0tIE1ldGVycyAtLT4KICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSI3NSIgcj0iMTgiIGZpbGw9IiMwYTE2MjgiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8Y2lyY2xlIGN4PSIyNDAiIGN5PSI3NSIgcj0iMTgiIGZpbGw9IiMwYTE2MjgiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iMTYwIiB5MT0iNzUiIHgyPSIxNzIiIHkyPSI2MyIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8bGluZSB4MT0iMjQwIiB5MT0iNzUiIHgyPSIyNTAiIHkyPSI2NSIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIFN0YXR1cyBsaWdodHMgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI2cpIj4KICAgIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjExNSIgcj0iNSIgZmlsbD0iIzIyYzU1ZSIgb3BhY2l0eT0iMC44Ii8+CiAgICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMTUiIHI9IjUiIGZpbGw9IiNmNTllMGIiIG9wYWNpdHk9IjAuOCIvPgogICAgPGNpcmNsZSBjeD0iMjUwIiBjeT0iMTE1IiByPSI1IiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjgiLz4KICA8L2c+CiAgPCEtLSBIYW5kbGUgLS0+CiAgPHJlY3QgeD0iMTkyIiB5PSIxMzUiIHdpZHRoPSIxNiIgaGVpZ2h0PSIzMCIgcng9IjMiIGZpbGw9IiM0YTYwODAiLz4KICA8IS0tIFdhcm5pbmcgdHJpYW5nbGUgLS0+CiAgPHBvbHlnb24gcG9pbnRzPSIyMDAsMTgwIDIxNSwyMDAgMTg1LDIwMCIgZmlsbD0iI2Y1OWUwYiIgb3BhY2l0eT0iMC41Ii8+CiAgPCEtLSBDYWJsZXMgdG9wIC0tPgogIDxnIGZpbHRlcj0idXJsKCNnKSI+CiAgICA8cGF0aCBkPSJNMTYwLDMwIFExNjAsMTAgMTQwLDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIyLjUiIG9wYWNpdHk9IjAuNCIvPgogICAgPHBhdGggZD0iTTIwMCwzMCBRMjAwLDUgMjAwLDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIyLjUiIG9wYWNpdHk9IjAuNCIvPgogICAgPHBhdGggZD0iTTI0MCwzMCBRMjQwLDEwIDI2MCwwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMi41IiBvcGFjaXR5PSIwLjQiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="受変電・高圧設備" class="service-img">
+        <div class="service-icon">⚡</div>
+        <h3>受変電・高圧設備</h3>
+        <p>高圧受電設備の設置・更新・保守点検。キュービクル設置から年次点検まで対応します。</p>
+      </div>
+      <div class="service-card" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzExMWYzYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMmQ0ZCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJnIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gQnVpbGRpbmdzIC0tPgogIDxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjE2MCIgcng9IjMiIGZpbGw9IiMxZTJkNDUiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHJlY3QgeD0iMTYwIiB5PSIyMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxODAiIHJ4PSIzIiBmaWxsPSIjMWUyZDQ1IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxyZWN0IHg9IjI4MCIgeT0iNTUiIHdpZHRoPSI3MCIgaGVpZ2h0PSIxNDUiIHJ4PSIzIiBmaWxsPSIjMWUyZDQ1IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMSIvPgogIDwhLS0gV2luZG93cyBncmlkIC0tPgogIDxnIGZpbGw9IiMwYTE2MjgiIG9wYWNpdHk9IjAuOCI+CiAgICA8cmVjdCB4PSI3MiIgeT0iNTUiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNCIgcng9IjEiLz48cmVjdCB4PSI5MiIgeT0iNTUiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNCIgcng9IjEiLz48cmVjdCB4PSIxMTIiIHk9IjU1IiB3aWR0aD0iMTIiIGhlaWdodD0iMTQiIHJ4PSIxIi8+CiAgICA8cmVjdCB4PSI3MiIgeT0iODAiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNCIgcng9IjEiLz48cmVjdCB4PSI5MiIgeT0iODAiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNCIgcng9IjEiLz48cmVjdCB4PSIxMTIiIHk9IjgwIiB3aWR0aD0iMTIiIGhlaWdodD0iMTQiIHJ4PSIxIi8+CiAgICA8cmVjdCB4PSI3MiIgeT0iMTA1IiB3aWR0aD0iMTIiIGhlaWdodD0iMTQiIHJ4PSIxIi8+PHJlY3QgeD0iOTIiIHk9IjEwNSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjE0IiByeD0iMSIvPjxyZWN0IHg9IjExMiIgeT0iMTA1IiB3aWR0aD0iMTIiIGhlaWdodD0iMTQiIHJ4PSIxIi8+CiAgICA8cmVjdCB4PSIxNzUiIHk9IjM1IiB3aWR0aD0iMTQiIGhlaWdodD0iMTYiIHJ4PSIxIi8+PHJlY3QgeD0iMjAwIiB5PSIzNSIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE2IiByeD0iMSIvPjxyZWN0IHg9IjIyNSIgeT0iMzUiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNiIgcng9IjEiLz4KICAgIDxyZWN0IHg9IjE3NSIgeT0iNjIiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNiIgcng9IjEiLz48cmVjdCB4PSIyMDAiIHk9IjYyIiB3aWR0aD0iMTQiIGhlaWdodD0iMTYiIHJ4PSIxIi8+PHJlY3QgeD0iMjI1IiB5PSI2MiIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE2IiByeD0iMSIvPgogICAgPHJlY3QgeD0iMTc1IiB5PSI4OSIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE2IiByeD0iMSIvPjxyZWN0IHg9IjIwMCIgeT0iODkiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNiIgcng9IjEiLz48cmVjdCB4PSIyMjUiIHk9Ijg5IiB3aWR0aD0iMTQiIGhlaWdodD0iMTYiIHJ4PSIxIi8+CiAgICA8cmVjdCB4PSIxNzUiIHk9IjExNiIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE2IiByeD0iMSIvPjxyZWN0IHg9IjIwMCIgeT0iMTE2IiB3aWR0aD0iMTQiIGhlaWdodD0iMTYiIHJ4PSIxIi8+PHJlY3QgeD0iMjI1IiB5PSIxMTYiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNiIgcng9IjEiLz4KICA8L2c+CiAgPCEtLSBMaXQgd2luZG93cyAtLT4KICA8ZyBmaWx0ZXI9InVybCgjZykiPgogICAgPHJlY3QgeD0iOTMiIHk9IjU2IiB3aWR0aD0iMTAiIGhlaWdodD0iMTIiIHJ4PSIxIiBmaWxsPSIjZjU5ZTBiIiBvcGFjaXR5PSIwLjQiLz4KICAgIDxyZWN0IHg9IjE3NiIgeT0iMzYiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNCIgcng9IjEiIGZpbGw9IiNmNTllMGIiIG9wYWNpdHk9IjAuMzUiLz4KICAgIDxyZWN0IHg9IjIwMSIgeT0iOTAiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNCIgcng9IjEiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuMyIvPgogICAgPHJlY3QgeD0iMjI2IiB5PSIxMTciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxNCIgcng9IjEiIGZpbGw9IiNmNTllMGIiIG9wYWNpdHk9IjAuMyIvPgogIDwvZz4KICA8IS0tIEVsZWN0cmljYWwgY29uZHVpdCBsaW5lcyBvbiBidWlsZGluZyAtLT4KICA8ZyBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC4yIiBmaWx0ZXI9InVybCgjZykiPgogICAgPGxpbmUgeDE9IjE0NSIgeTE9IjYwIiB4Mj0iMTQ1IiB5Mj0iMjAwIi8+CiAgICA8bGluZSB4MT0iMjY1IiB5MT0iNDAiIHgyPSIyNjUiIHkyPSIyMDAiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="ビル・商業施設" class="service-img">
+        <div class="service-icon">🏢</div>
+        <h3>ビル・商業施設</h3>
+        <p>オフィスビル、商業施設の幹線工事、照明設備、非常用電源設備など大規模電気設備工事に対応。</p>
+      </div>
+      <div class="service-card" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzExMWYzYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMmQ0ZCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJnIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gUGFuZWwgLS0+CiAgPHJlY3QgeD0iODAiIHk9IjE1IiB3aWR0aD0iMjQwIiBoZWlnaHQ9IjE3MCIgcng9IjUiIGZpbGw9IiMxZTJkNDUiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8IS0tIERpc3BsYXkgc2NyZWVuIC0tPgogIDxyZWN0IHg9IjEwMCIgeT0iMzAiIHdpZHRoPSIyMDAiIGhlaWdodD0iNTUiIHJ4PSIzIiBmaWxsPSIjMGExNjI4IiBzdHJva2U9IiMyYTNkNTciIHN0cm9rZS13aWR0aD0iMSIvPgogIDwhLS0gV2F2ZWZvcm0gLS0+CiAgPHBvbHlsaW5lIHBvaW50cz0iMTEwLDU4IDEzMCw0NSAxNTAsNjUgMTcwLDQwIDE5MCw2MiAyMTAsMzggMjMwLDU1IDI1MCw0OCAyNzAsNTIgMjkwLDQ0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyMmM1NWUiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC43Ii8+CiAgPHBvbHlsaW5lIHBvaW50cz0iMTEwLDcwIDE0MCw2NiAxNzAsNzIgMjAwLDY0IDIzMCw2OCAyNjAsNjMgMjkwLDY3IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8IS0tIERJTiByYWlsIGNvbXBvbmVudHMgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAwLCAxMDApIj4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMiIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiMyYTNkNTciIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICAgIDxyZWN0IHg9IjI4IiB5PSIwIiB3aWR0aD0iMjIiIGhlaWdodD0iNDAiIHJ4PSIyIiBmaWxsPSIjMmEzZDU3IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgICA8cmVjdCB4PSI1NiIgeT0iMCIgd2lkdGg9IjIyIiBoZWlnaHQ9IjQwIiByeD0iMiIgZmlsbD0iIzJhM2Q1NyIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjAuOCIvPgogICAgPHJlY3QgeD0iODQiIHk9IjAiIHdpZHRoPSIyMiIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiMyYTNkNTciIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICAgIDxyZWN0IHg9IjExMiIgeT0iMCIgd2lkdGg9IjIyIiBoZWlnaHQ9IjQwIiByeD0iMiIgZmlsbD0iIzJhM2Q1NyIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjAuOCIvPgogICAgPHJlY3QgeD0iMTQwIiB5PSIwIiB3aWR0aD0iMjIiIGhlaWdodD0iNDAiIHJ4PSIyIiBmaWxsPSIjMmEzZDU3IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgICA8cmVjdCB4PSIxNjgiIHk9IjAiIHdpZHRoPSIyMiIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiMyYTNkNTciIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICA8L2c+CiAgPCEtLSBTdGF0dXMgTEVEcyAtLT4KICA8ZyBmaWx0ZXI9InVybCgjZykiPgogICAgPGNpcmNsZSBjeD0iMTExIiBjeT0iMTUwIiByPSIzIiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjkiLz4KICAgIDxjaXJjbGUgY3g9IjEzOSIgY3k9IjE1MCIgcj0iMyIgZmlsbD0iIzIyYzU1ZSIgb3BhY2l0eT0iMC45Ii8+CiAgICA8Y2lyY2xlIGN4PSIxNjciIGN5PSIxNTAiIHI9IjMiIGZpbGw9IiNmNTllMGIiIG9wYWNpdHk9IjAuOSIvPgogICAgPGNpcmNsZSBjeD0iMTk1IiBjeT0iMTUwIiByPSIzIiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjkiLz4KICAgIDxjaXJjbGUgY3g9IjIyMyIgY3k9IjE1MCIgcj0iMyIgZmlsbD0iI2VmNDQ0NCIgb3BhY2l0eT0iMC43Ii8+CiAgICA8Y2lyY2xlIGN4PSIyNTEiIGN5PSIxNTAiIHI9IjMiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuOSIvPgogICAgPGNpcmNsZSBjeD0iMjc5IiBjeT0iMTUwIiByPSIzIiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjkiLz4KICA8L2c+CiAgPCEtLSBXaXJpbmcgLS0+CiAgPGcgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuMiI+CiAgICA8bGluZSB4MT0iMTExIiB5MT0iMTYwIiB4Mj0iMTExIiB5Mj0iMjAwIi8+PGxpbmUgeDE9IjE2NyIgeTE9IjE2MCIgeDI9IjE2NyIgeTI9IjIwMCIvPgogICAgPGxpbmUgeDE9IjIyMyIgeTE9IjE2MCIgeDI9IjIyMyIgeTI9IjIwMCIvPjxsaW5lIHgxPSIyNzkiIHkxPSIxNjAiIHgyPSIyNzkiIHkyPSIyMDAiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="制御盤・計装工事" class="service-img">
+        <div class="service-icon">🔧</div>
+        <h3>制御盤・計装工事</h3>
+        <p>PLC制御、自動制御システム、計装設備の配線・据付工事。生産設備の自動化をサポートします。</p>
+      </div>
+      <div class="service-card" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzExMWYzYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMmQ0ZCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJnIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gSFZBQyB1bml0IC0tPgogIDxyZWN0IHg9IjEwMCIgeT0iNDAiIHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIiByeD0iOCIgZmlsbD0iIzFlMmQ0NSIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwhLS0gRmFuIGNpcmNsZSAtLT4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSI5MCIgcj0iMzUiIGZpbGw9IiMwYTE2MjgiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8IS0tIEZhbiBibGFkZXMgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjAwLDkwKSIgb3BhY2l0eT0iMC42IiBzdHJva2U9IiM0YTYwODAiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSI+CiAgICA8cGF0aCBkPSJNMCwtMjUgUTE1LC0xMCAwLDAgUS0xNSwtMTAgMCwtMjUiLz4KICAgIDxwYXRoIGQ9Ik0yNSwwIFExMCwxNSAwLDAgUTEwLC0xNSAyNSwwIi8+CiAgICA8cGF0aCBkPSJNMCwyNSBRLTE1LDEwIDAsMCBRMTUsMTAgMCwyNSIvPgogICAgPHBhdGggZD0iTS0yNSwwIFEtMTAsLTE1IDAsMCBRLTEwLDE1IC0yNSwwIi8+CiAgPC9nPgogIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjkwIiByPSI1IiBmaWxsPSIjM2I0ZjZiIi8+CiAgPCEtLSBWZW50IGdyaWxscyAtLT4KICA8ZyBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC40Ij4KICAgIDxsaW5lIHgxPSIxMTAiIHkxPSI1NSIgeDI9IjE1NSIgeTI9IjU1Ii8+PGxpbmUgeDE9IjExMCIgeTE9IjYyIiB4Mj0iMTU1IiB5Mj0iNjIiLz4KICAgIDxsaW5lIHgxPSIxMTAiIHkxPSI2OSIgeDI9IjE1NSIgeTI9IjY5Ii8+CiAgICA8bGluZSB4MT0iMjQ1IiB5MT0iNTUiIHgyPSIyOTAiIHkyPSI1NSIvPjxsaW5lIHgxPSIyNDUiIHkxPSI2MiIgeDI9IjI5MCIgeTI9IjYyIi8+CiAgICA8bGluZSB4MT0iMjQ1IiB5MT0iNjkiIHgyPSIyOTAiIHkyPSI2OSIvPgogIDwvZz4KICA8IS0tIER1Y3QgbGluZXMgLS0+CiAgPHJlY3QgeD0iMzAiIHk9Ijc1IiB3aWR0aD0iNzAiIGhlaWdodD0iMzAiIHJ4PSIzIiBmaWxsPSIjMWUyZDQ1IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC43Ii8+CiAgPHJlY3QgeD0iMzAwIiB5PSI3NSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjMwIiByeD0iMyIgZmlsbD0iIzFlMmQ0NSIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuNyIvPgogIDwhLS0gUG93ZXIgY2FibGUgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI2cpIj4KICAgIDxwYXRoIGQ9Ik0yMDAsMTQwIFEyMDAsMTcwIDIyMCwxODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjQiLz4KICAgIDxwYXRoIGQ9Ik0xODAsMTQwIFExODAsMTY1IDE2MCwxNzUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIyIiBvcGFjaXR5PSIwLjQiLz4KICA8L2c+CiAgPCEtLSBBaXJmbG93IGFycm93cyAtLT4KICA8ZyBmaWxsPSIjNjQ3NDhiIiBvcGFjaXR5PSIwLjMiPgogICAgPHBvbHlnb24gcG9pbnRzPSI0NSw4MiA1NSw5MCA0NSw5OCIvPgogICAgPHBvbHlnb24gcG9pbnRzPSIzNTUsODIgMzQ1LDkwIDM1NSw5OCIvPgogIDwvZz4KPC9zdmc+Cg==" alt="空調・換気設備" class="service-img">
+        <div class="service-icon">💨</div>
+        <h3>空調・換気設備</h3>
+        <p>空調設備の電気工事、換気システムの施工。クリーンルーム対応の空調電気工事も実績あり。</p>
+      </div>
+      <div class="service-card" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzExMWYzYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMmQ0ZCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJnIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gU2VydmVyIHJhY2sgLS0+CiAgPHJlY3QgeD0iMTQwIiB5PSIyMCIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxNjAiIHJ4PSI0IiBmaWxsPSIjMWUyZDQ1IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPCEtLSBSYWNrIHVuaXRzIC0tPgogIDxnPgogICAgPHJlY3QgeD0iMTUwIiB5PSIzMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIyMiIgcng9IjIiIGZpbGw9IiMwYTE2MjgiIHN0cm9rZT0iIzJhM2Q1NyIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICAgIDxyZWN0IHg9IjE1MCIgeT0iNTgiIHdpZHRoPSIxMDAiIGhlaWdodD0iMjIiIHJ4PSIyIiBmaWxsPSIjMGExNjI4IiBzdHJva2U9IiMyYTNkNTciIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgICA8cmVjdCB4PSIxNTAiIHk9Ijg2IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjIyIiByeD0iMiIgZmlsbD0iIzBhMTYyOCIgc3Ryb2tlPSIjMmEzZDU3IiBzdHJva2Utd2lkdGg9IjAuOCIvPgogICAgPHJlY3QgeD0iMTUwIiB5PSIxMTQiIHdpZHRoPSIxMDAiIGhlaWdodD0iMjIiIHJ4PSIyIiBmaWxsPSIjMGExNjI4IiBzdHJva2U9IiMyYTNkNTciIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgICA8cmVjdCB4PSIxNTAiIHk9IjE0MiIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIyMiIgcng9IjIiIGZpbGw9IiMwYTE2MjgiIHN0cm9rZT0iIzJhM2Q1NyIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICA8L2c+CiAgPCEtLSBMRURzIHBlciB1bml0IC0tPgogIDxnIGZpbHRlcj0idXJsKCNnKSI+CiAgICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSI0MSIgcj0iMi41IiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjgiLz4KICAgIDxjaXJjbGUgY3g9IjE3MCIgY3k9IjQxIiByPSIyLjUiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuOCIvPgogICAgPGNpcmNsZSBjeD0iMTgwIiBjeT0iNDEiIHI9IjIuNSIgZmlsbD0iI2Y1OWUwYiIgb3BhY2l0eT0iMC43Ii8+CiAgICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSI2OSIgcj0iMi41IiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjgiLz4KICAgIDxjaXJjbGUgY3g9IjE3MCIgY3k9IjY5IiByPSIyLjUiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuOCIvPgogICAgPGNpcmNsZSBjeD0iMTYwIiBjeT0iOTciIHI9IjIuNSIgZmlsbD0iIzIyYzU1ZSIgb3BhY2l0eT0iMC44Ii8+CiAgICA8Y2lyY2xlIGN4PSIxNzAiIGN5PSI5NyIgcj0iMi41IiBmaWxsPSIjZjU5ZTBiIiBvcGFjaXR5PSIwLjciLz4KICAgIDxjaXJjbGUgY3g9IjE4MCIgY3k9Ijk3IiByPSIyLjUiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuOCIvPgogICAgPGNpcmNsZSBjeD0iMTYwIiBjeT0iMTI1IiByPSIyLjUiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuOCIvPgogICAgPGNpcmNsZSBjeD0iMTYwIiBjeT0iMTUzIiByPSIyLjUiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuOCIvPgogICAgPGNpcmNsZSBjeD0iMTcwIiBjeT0iMTUzIiByPSIyLjUiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuOCIvPgogIDwvZz4KICA8IS0tIE5ldHdvcmsgY2FibGVzIC0tPgogIDxnIGZpbHRlcj0idXJsKCNnKSIgb3BhY2l0eT0iMC40Ij4KICAgIDxwYXRoIGQ9Ik0yNjAsNDEgUTMwMCw0MSAzMjAsNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNiODJmNiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cGF0aCBkPSJNMjYwLDY5IFEzMTAsNjkgMzQwLDkwIiBmaWxsPSJub25lIiBzdHJva2U9IiMyMmM1NWUiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPHBhdGggZD0iTTI2MCw5NyBRMjkwLDk3IDMxMCwxMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cGF0aCBkPSJNMTQwLDQxIFExMDAsNDEgODAsNTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNiODJmNiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8cGF0aCBkPSJNMTQwLDk3IFE5MCw5NyA2MCwxMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzIyYzU1ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPC9nPgogIDwhLS0gRW5kcG9pbnQgZG90cyAtLT4KICA8ZyBmaWx0ZXI9InVybCgjZykiPgogICAgPGNpcmNsZSBjeD0iMzIwIiBjeT0iNjAiIHI9IjQiIGZpbGw9IiMzYjgyZjYiIG9wYWNpdHk9IjAuNSIvPgogICAgPGNpcmNsZSBjeD0iMzQwIiBjeT0iOTAiIHI9IjQiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuNSIvPgogICAgPGNpcmNsZSBjeD0iMzEwIiBjeT0iMTIwIiByPSI0IiBmaWxsPSIjZjU5ZTBiIiBvcGFjaXR5PSIwLjUiLz4KICAgIDxjaXJjbGUgY3g9IjgwIiBjeT0iNTUiIHI9IjQiIGZpbGw9IiMzYjgyZjYiIG9wYWNpdHk9IjAuNSIvPgogICAgPGNpcmNsZSBjeD0iNjAiIGN5PSIxMjAiIHI9IjQiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuNSIvPgogIDwvZz4KPC9zdmc+Cg==" alt="通信・LAN工事" class="service-img">
+        <div class="service-icon">🌐</div>
+        <h3>通信・LAN工事</h3>
+        <p>構内ネットワーク構築、LAN配線、光ファイバー敷設、監視カメラ設備の施工を行います。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-us" id="why-us">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <div class="section-label">Strength</div>
+        <h2 class="section-title">当社の強み</h2>
+        <p class="section-desc" style="margin-bottom: 40px;">
+          東芝グループのパートナーとして培った技術力と品質管理体制で、安全・確実な施工を実現します。
+        </p>
+        <div class="why-gallery">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjYwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI2MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzExMWYzYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMmQ0ZCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJnIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjYwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gV2FsbCBwYW5lbCAtLT4KICA8cmVjdCB4PSI2MCIgeT0iMzAiIHdpZHRoPSIyODAiIGhlaWdodD0iMjAwIiByeD0iNCIgZmlsbD0iIzFlMmQ0NSIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8IS0tIENhYmxlIGNvbmR1aXRzIC0tPgogIDxnIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSI0IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjciPgogICAgPHBhdGggZD0iTTgwLDYwIEw4MCwyMDAiLz4KICAgIDxwYXRoIGQ9Ik04MCwxMDAgTDIwMCwxMDAiLz4KICAgIDxwYXRoIGQ9Ik0yMDAsNjAgTDIwMCwyMDAiLz4KICAgIDxwYXRoIGQ9Ik0yMDAsMTUwIEwzMjAsMTUwIi8+CiAgICA8cGF0aCBkPSJNMzIwLDYwIEwzMjAsMjAwIi8+CiAgPC9nPgogIDwhLS0gQ2FibGVzIGluc2lkZSBjb25kdWl0cyAtLT4KICA8ZyBmaWx0ZXI9InVybCgjZykiIG9wYWNpdHk9IjAuNSI+CiAgICA8bGluZSB4MT0iODAiIHkxPSI2MCIgeDI9IjgwIiB5Mj0iMjAwIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICA8bGluZSB4MT0iODAiIHkxPSIxMDAiIHgyPSIyMDAiIHkyPSIxMDAiIHN0cm9rZT0iIzIyYzU1ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICAgIDxsaW5lIHgxPSIyMDAiIHkxPSI2MCIgeDI9IjIwMCIgeTI9IjIwMCIgc3Ryb2tlPSIjM2I4MmY2IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPGxpbmUgeDE9IjIwMCIgeTE9IjE1MCIgeDI9IjMyMCIgeTI9IjE1MCIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPGxpbmUgeDE9IjMyMCIgeTE9IjYwIiB4Mj0iMzIwIiB5Mj0iMjAwIiBzdHJva2U9IiMyMmM1NWUiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPC9nPgogIDwhLS0gSnVuY3Rpb24gYm94ZXMgLS0+CiAgPHJlY3QgeD0iNzAiIHk9IjkwIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSIyIiBmaWxsPSIjMmEzZDU3IiBzdHJva2U9IiM0YTYwODAiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxyZWN0IHg9IjE5MCIgeT0iOTAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcng9IjIiIGZpbGw9IiMyYTNkNTciIHN0cm9rZT0iIzRhNjA4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHJlY3QgeD0iMTkwIiB5PSIxNDAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcng9IjIiIGZpbGw9IiMyYTNkNTciIHN0cm9rZT0iIzRhNjA4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHJlY3QgeD0iMzEwIiB5PSIxNDAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcng9IjIiIGZpbGw9IiMyYTNkNTciIHN0cm9rZT0iIzRhNjA4MCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPCEtLSBPdXRsZXQgYm94ZXMgLS0+CiAgPGc+CiAgICA8cmVjdCB4PSI2OCIgeT0iMTcwIiB3aWR0aD0iMjQiIGhlaWdodD0iMzUiIHJ4PSIzIiBmaWxsPSIjMmEzZDU3IiBzdHJva2U9IiM0YTYwODAiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPHJlY3QgeD0iNzQiIHk9IjE3OCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjYiIHJ4PSIxIiBmaWxsPSIjMGExNjI4Ii8+CiAgICA8cmVjdCB4PSI3NCIgeT0iMTkwIiB3aWR0aD0iMTIiIGhlaWdodD0iNiIgcng9IjEiIGZpbGw9IiMwYTE2MjgiLz4KICAgIDxyZWN0IHg9IjMwOCIgeT0iMTcwIiB3aWR0aD0iMjQiIGhlaWdodD0iMzUiIHJ4PSIzIiBmaWxsPSIjMmEzZDU3IiBzdHJva2U9IiM0YTYwODAiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPHJlY3QgeD0iMzE0IiB5PSIxNzgiIHdpZHRoPSIxMiIgaGVpZ2h0PSI2IiByeD0iMSIgZmlsbD0iIzBhMTYyOCIvPgogICAgPHJlY3QgeD0iMzE0IiB5PSIxOTAiIHdpZHRoPSIxMiIgaGVpZ2h0PSI2IiByeD0iMSIgZmlsbD0iIzBhMTYyOCIvPgogIDwvZz4KPC9zdmc+Cg==" alt="施工風景">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjYwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI2MCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzExMWYzYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMmQ0ZCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJnIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjYwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gRGlzdHJpYnV0aW9uIGJvYXJkIC0tPgogIDxyZWN0IHg9IjgwIiB5PSIyMCIgd2lkdGg9IjI0MCIgaGVpZ2h0PSIyMjAiIHJ4PSI1IiBmaWxsPSIjMWUyZDQ1IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPCEtLSBNYWluIGJyZWFrZXIgLS0+CiAgPHJlY3QgeD0iMTYwIiB5PSIzNSIgd2lkdGg9IjgwIiBoZWlnaHQ9IjQwIiByeD0iMyIgZmlsbD0iIzBhMTYyOCIgc3Ryb2tlPSIjNGE2MDgwIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8cmVjdCB4PSIxODUiIHk9IjQyIiB3aWR0aD0iMzAiIGhlaWdodD0iMTgiIHJ4PSIyIiBmaWxsPSIjNGE2MDgwIi8+CiAgPHRleHQgeD0iMjAwIiB5PSI1NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI4IiBmaWxsPSIjOTRhM2I4IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+TUFJTjwvdGV4dD4KICA8IS0tIEJyZWFrZXIgcm93cyAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5NSwgOTApIj4KICAgIDwhLS0gUm93IDEgLS0+CiAgICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMzIiIGhlaWdodD0iNDUiIHJ4PSIyIiBmaWxsPSIjMGExNjI4IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgICA8cmVjdCB4PSIzOCIgeT0iMCIgd2lkdGg9IjMyIiBoZWlnaHQ9IjQ1IiByeD0iMiIgZmlsbD0iIzBhMTYyOCIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjAuOCIvPgogICAgPHJlY3QgeD0iNzYiIHk9IjAiIHdpZHRoPSIzMiIgaGVpZ2h0PSI0NSIgcng9IjIiIGZpbGw9IiMwYTE2MjgiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICAgIDxyZWN0IHg9IjExNCIgeT0iMCIgd2lkdGg9IjMyIiBoZWlnaHQ9IjQ1IiByeD0iMiIgZmlsbD0iIzBhMTYyOCIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjAuOCIvPgogICAgPHJlY3QgeD0iMTUyIiB5PSIwIiB3aWR0aD0iMzIiIGhlaWdodD0iNDUiIHJ4PSIyIiBmaWxsPSIjMGExNjI4IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgICA8IS0tIEhhbmRsZXMgLS0+CiAgICA8cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxOCIgcng9IjIiIGZpbGw9IiM0YTYwODAiLz4KICAgIDxyZWN0IHg9IjQ4IiB5PSIxMCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjE4IiByeD0iMiIgZmlsbD0iIzRhNjA4MCIvPgogICAgPHJlY3QgeD0iODYiIHk9IjE4IiB3aWR0aD0iMTIiIGhlaWdodD0iMTgiIHJ4PSIyIiBmaWxsPSIjZWY0NDQ0IiBvcGFjaXR5PSIwLjYiLz4KICAgIDxyZWN0IHg9IjEyNCIgeT0iMTAiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxOCIgcng9IjIiIGZpbGw9IiM0YTYwODAiLz4KICAgIDxyZWN0IHg9IjE2MiIgeT0iMTAiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxOCIgcng9IjIiIGZpbGw9IiM0YTYwODAiLz4KICAgIDwhLS0gUm93IDIgLS0+CiAgICA8cmVjdCB4PSIwIiB5PSI1NSIgd2lkdGg9IjMyIiBoZWlnaHQ9IjQ1IiByeD0iMiIgZmlsbD0iIzBhMTYyOCIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjAuOCIvPgogICAgPHJlY3QgeD0iMzgiIHk9IjU1IiB3aWR0aD0iMzIiIGhlaWdodD0iNDUiIHJ4PSIyIiBmaWxsPSIjMGExNjI4IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgICA8cmVjdCB4PSI3NiIgeT0iNTUiIHdpZHRoPSIzMiIgaGVpZ2h0PSI0NSIgcng9IjIiIGZpbGw9IiMwYTE2MjgiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICAgIDxyZWN0IHg9IjExNCIgeT0iNTUiIHdpZHRoPSIzMiIgaGVpZ2h0PSI0NSIgcng9IjIiIGZpbGw9IiMwYTE2MjgiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICAgIDxyZWN0IHg9IjE1MiIgeT0iNTUiIHdpZHRoPSIzMiIgaGVpZ2h0PSI0NSIgcng9IjIiIGZpbGw9IiMwYTE2MjgiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICAgIDxyZWN0IHg9IjEwIiB5PSI2NSIgd2lkdGg9IjEyIiBoZWlnaHQ9IjE4IiByeD0iMiIgZmlsbD0iIzRhNjA4MCIvPgogICAgPHJlY3QgeD0iNDgiIHk9IjY1IiB3aWR0aD0iMTIiIGhlaWdodD0iMTgiIHJ4PSIyIiBmaWxsPSIjNGE2MDgwIi8+CiAgICA8cmVjdCB4PSI4NiIgeT0iNjUiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxOCIgcng9IjIiIGZpbGw9IiM0YTYwODAiLz4KICAgIDxyZWN0IHg9IjEyNCIgeT0iNjUiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxOCIgcng9IjIiIGZpbGw9IiM0YTYwODAiLz4KICAgIDxyZWN0IHg9IjE2MiIgeT0iNjUiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxOCIgcng9IjIiIGZpbGw9IiM0YTYwODAiLz4KICA8L2c+CiAgPCEtLSBTdGF0dXMgaW5kaWNhdG9yIC0tPgogIDxnIGZpbHRlcj0idXJsKCNnKSI+CiAgICA8Y2lyY2xlIGN4PSIxMjAiIGN5PSIyMTAiIHI9IjQiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuOCIvPgogICAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjEwIiByPSI0IiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjgiLz4KICAgIDxjaXJjbGUgY3g9IjI4MCIgY3k9IjIxMCIgcj0iNCIgZmlsbD0iI2Y1OWUwYiIgb3BhY2l0eT0iMC43Ii8+CiAgPC9nPgogIDwhLS0gQ2FibGUgZW50cnkgYm90dG9tIC0tPgogIDxnIGZpbHRlcj0idXJsKCNnKSIgb3BhY2l0eT0iMC4zIj4KICAgIDxsaW5lIHgxPSIxMjAiIHkxPSIyNDAiIHgyPSIxMjAiIHkyPSIyNjAiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgICA8bGluZSB4MT0iMjAwIiB5MT0iMjQwIiB4Mj0iMjAwIiB5Mj0iMjYwIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMyIvPgogICAgPGxpbmUgeDE9IjI4MCIgeTE9IjI0MCIgeDI9IjI4MCIgeTI9IjI2MCIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="施工風景">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzExMWYzYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMmQ0ZCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJnIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIzIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gQ3ViaWNsZSBib3ggLS0+CiAgPHJlY3QgeD0iMTIwIiB5PSIzMCIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIxNTAiIHJ4PSI0IiBmaWxsPSIjMWUyZDQ1IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjIwMCIgeTE9IjM1IiB4Mj0iMjAwIiB5Mj0iMTc1IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMC44IiBvcGFjaXR5PSIwLjUiLz4KICA8IS0tIE1ldGVycyAtLT4KICA8Y2lyY2xlIGN4PSIxNjAiIGN5PSI3NSIgcj0iMTgiIGZpbGw9IiMwYTE2MjgiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8Y2lyY2xlIGN4PSIyNDAiIGN5PSI3NSIgcj0iMTgiIGZpbGw9IiMwYTE2MjgiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iMTYwIiB5MT0iNzUiIHgyPSIxNzIiIHkyPSI2MyIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8bGluZSB4MT0iMjQwIiB5MT0iNzUiIHgyPSIyNTAiIHkyPSI2NSIgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIFN0YXR1cyBsaWdodHMgLS0+CiAgPGcgZmlsdGVyPSJ1cmwoI2cpIj4KICAgIDxjaXJjbGUgY3g9IjE1MCIgY3k9IjExNSIgcj0iNSIgZmlsbD0iIzIyYzU1ZSIgb3BhY2l0eT0iMC44Ii8+CiAgICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxMTUiIHI9IjUiIGZpbGw9IiNmNTllMGIiIG9wYWNpdHk9IjAuOCIvPgogICAgPGNpcmNsZSBjeD0iMjUwIiBjeT0iMTE1IiByPSI1IiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjgiLz4KICA8L2c+CiAgPCEtLSBIYW5kbGUgLS0+CiAgPHJlY3QgeD0iMTkyIiB5PSIxMzUiIHdpZHRoPSIxNiIgaGVpZ2h0PSIzMCIgcng9IjMiIGZpbGw9IiM0YTYwODAiLz4KICA8IS0tIFdhcm5pbmcgdHJpYW5nbGUgLS0+CiAgPHBvbHlnb24gcG9pbnRzPSIyMDAsMTgwIDIxNSwyMDAgMTg1LDIwMCIgZmlsbD0iI2Y1OWUwYiIgb3BhY2l0eT0iMC41Ii8+CiAgPCEtLSBDYWJsZXMgdG9wIC0tPgogIDxnIGZpbHRlcj0idXJsKCNnKSI+CiAgICA8cGF0aCBkPSJNMTYwLDMwIFExNjAsMTAgMTQwLDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIyLjUiIG9wYWNpdHk9IjAuNCIvPgogICAgPHBhdGggZD0iTTIwMCwzMCBRMjAwLDUgMjAwLDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y1OWUwYiIgc3Ryb2tlLXdpZHRoPSIyLjUiIG9wYWNpdHk9IjAuNCIvPgogICAgPHBhdGggZD0iTTI0MCwzMCBRMjQwLDEwIDI2MCwwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMi41IiBvcGFjaXR5PSIwLjQiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="電気設備">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjAwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzExMWYzYSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMmQ0ZCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8ZmlsdGVyIGlkPSJnIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ1cmwoI2JnKSIvPgogIDwhLS0gUGFuZWwgLS0+CiAgPHJlY3QgeD0iODAiIHk9IjE1IiB3aWR0aD0iMjQwIiBoZWlnaHQ9IjE3MCIgcng9IjUiIGZpbGw9IiMxZTJkNDUiIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8IS0tIERpc3BsYXkgc2NyZWVuIC0tPgogIDxyZWN0IHg9IjEwMCIgeT0iMzAiIHdpZHRoPSIyMDAiIGhlaWdodD0iNTUiIHJ4PSIzIiBmaWxsPSIjMGExNjI4IiBzdHJva2U9IiMyYTNkNTciIHN0cm9rZS13aWR0aD0iMSIvPgogIDwhLS0gV2F2ZWZvcm0gLS0+CiAgPHBvbHlsaW5lIHBvaW50cz0iMTEwLDU4IDEzMCw0NSAxNTAsNjUgMTcwLDQwIDE5MCw2MiAyMTAsMzggMjMwLDU1IDI1MCw0OCAyNzAsNTIgMjkwLDQ0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyMmM1NWUiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC43Ii8+CiAgPHBvbHlsaW5lIHBvaW50cz0iMTEwLDcwIDE0MCw2NiAxNzAsNzIgMjAwLDY0IDIzMCw2OCAyNjAsNjMgMjkwLDY3IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNTllMGIiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8IS0tIERJTiByYWlsIGNvbXBvbmVudHMgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAwLCAxMDApIj4KICAgIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMiIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiMyYTNkNTciIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICAgIDxyZWN0IHg9IjI4IiB5PSIwIiB3aWR0aD0iMjIiIGhlaWdodD0iNDAiIHJ4PSIyIiBmaWxsPSIjMmEzZDU3IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgICA8cmVjdCB4PSI1NiIgeT0iMCIgd2lkdGg9IjIyIiBoZWlnaHQ9IjQwIiByeD0iMiIgZmlsbD0iIzJhM2Q1NyIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjAuOCIvPgogICAgPHJlY3QgeD0iODQiIHk9IjAiIHdpZHRoPSIyMiIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiMyYTNkNTciIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICAgIDxyZWN0IHg9IjExMiIgeT0iMCIgd2lkdGg9IjIyIiBoZWlnaHQ9IjQwIiByeD0iMiIgZmlsbD0iIzJhM2Q1NyIgc3Ryb2tlPSIjM2I0ZjZiIiBzdHJva2Utd2lkdGg9IjAuOCIvPgogICAgPHJlY3QgeD0iMTQwIiB5PSIwIiB3aWR0aD0iMjIiIGhlaWdodD0iNDAiIHJ4PSIyIiBmaWxsPSIjMmEzZDU3IiBzdHJva2U9IiMzYjRmNmIiIHN0cm9rZS13aWR0aD0iMC44Ii8+CiAgICA8cmVjdCB4PSIxNjgiIHk9IjAiIHdpZHRoPSIyMiIgaGVpZ2h0PSI0MCIgcng9IjIiIGZpbGw9IiMyYTNkNTciIHN0cm9rZT0iIzNiNGY2YiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KICA8L2c+CiAgPCEtLSBTdGF0dXMgTEVEcyAtLT4KICA8ZyBmaWx0ZXI9InVybCgjZykiPgogICAgPGNpcmNsZSBjeD0iMTExIiBjeT0iMTUwIiByPSIzIiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjkiLz4KICAgIDxjaXJjbGUgY3g9IjEzOSIgY3k9IjE1MCIgcj0iMyIgZmlsbD0iIzIyYzU1ZSIgb3BhY2l0eT0iMC45Ii8+CiAgICA8Y2lyY2xlIGN4PSIxNjciIGN5PSIxNTAiIHI9IjMiIGZpbGw9IiNmNTllMGIiIG9wYWNpdHk9IjAuOSIvPgogICAgPGNpcmNsZSBjeD0iMTk1IiBjeT0iMTUwIiByPSIzIiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjkiLz4KICAgIDxjaXJjbGUgY3g9IjIyMyIgY3k9IjE1MCIgcj0iMyIgZmlsbD0iI2VmNDQ0NCIgb3BhY2l0eT0iMC43Ii8+CiAgICA8Y2lyY2xlIGN4PSIyNTEiIGN5PSIxNTAiIHI9IjMiIGZpbGw9IiMyMmM1NWUiIG9wYWNpdHk9IjAuOSIvPgogICAgPGNpcmNsZSBjeD0iMjc5IiBjeT0iMTUwIiByPSIzIiBmaWxsPSIjMjJjNTVlIiBvcGFjaXR5PSIwLjkiLz4KICA8L2c+CiAgPCEtLSBXaXJpbmcgLS0+CiAgPGcgc3Ryb2tlPSIjZjU5ZTBiIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuMiI+CiAgICA8bGluZSB4MT0iMTExIiB5MT0iMTYwIiB4Mj0iMTExIiB5Mj0iMjAwIi8+PGxpbmUgeDE9IjE2NyIgeTE9IjE2MCIgeDI9IjE2NyIgeTI9IjIwMCIvPgogICAgPGxpbmUgeDE9IjIyMyIgeTE9IjE2MCIgeDI9IjIyMyIgeTI9IjIwMCIvPjxsaW5lIHgxPSIyNzkiIHkxPSIxNjAiIHgyPSIyNzkiIHkyPSIyMDAiLz4KICA8L2c+Cjwvc3ZnPgo=" alt="電気設備">
+        </div>
+      </div>
+      <div class="why-list">
+        <div class="why-item" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+          <div class="why-num">01</div>
+          <div>
+            <h4>TOSHIBA協力会社としての実績</h4>
+            <p>東芝グループの品質基準に基づく施工管理体制を確立。大規模現場での豊富な実績があります。</p>
+          </div>
+        </div>
+        <div class="why-item" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+          <div class="why-num">02</div>
+          <div>
+            <h4>有資格者による確実な施工</h4>
+            <p>第一種電気工事士、1級施工管理技士など国家資格保有者が責任を持って施工を担当します。</p>
+          </div>
+        </div>
+        <div class="why-item" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+          <div class="why-num">03</div>
+          <div>
+            <h4>安全第一の施工管理</h4>
+            <p>KY活動・リスクアセスメントを徹底。無事故・無災害の安全施工を継続しています。</p>
+          </div>
+        </div>
+        <div class="why-item" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+          <div class="why-num">04</div>
+          <div>
+            <h4>設計から保守まで一貫対応</h4>
+            <p>電気設備の設計・施工・試運転・保守点検までワンストップで対応。工期短縮とコスト削減を実現。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="recruit" id="recruit">
+  <div class="container">
+    <div class="recruit-header">
+      <div class="section-label">Recruit</div>
+      <h2 class="section-title">採用情報</h2>
+      <p class="section-desc">電気工事の技術を身につけ、社会インフラを支える仕事に挑戦しませんか。</p>
+    </div>
+    <div class="recruit-content">
+      <div class="recruit-message">
+        <h3>一緒に働く仲間を募集しています</h3>
+        <p>忍田電設は、東芝グループの協力会社として工場・ビル・商業施設の電気設備工事を手がけています。</p>
+        <p>経験者はもちろん、未経験の方も歓迎します。資格取得支援制度を活用しながら、電気工事のプロフェッショナルへ成長できる環境です。</p>
+        <div class="recruit-points">
+          <div class="recruit-point" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+            <div class="recruit-point-icon">📚</div>
+            <span>資格取得支援制度あり（費用会社負担）</span>
+          </div>
+          <div class="recruit-point" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+            <div class="recruit-point-icon">👨‍🏫</div>
+            <span>ベテラン技術者による丁寧なOJT指導</span>
+          </div>
+          <div class="recruit-point" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+            <div class="recruit-point-icon">📈</div>
+            <span>経験・資格に応じた昇給制度</span>
+          </div>
+          <div class="recruit-point" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+            <div class="recruit-point-icon">🏥</div>
+            <span>社会保険完備・各種手当充実</span>
+          </div>
+          <div class="recruit-point" style="opacity: 0; animation: 0.7s ease 0s 1 normal forwards running fadeUp;">
+            <div class="recruit-point-icon">🚗</div>
+            <span>マイカー通勤OK・駐車場完備</span>
+          </div>
+        </div>
+      </div>
+      <div class="recruit-table">
+        <div class="recruit-table-row">
+          <div class="recruit-table-label">職種</div>
+          <div class="recruit-table-value">電気工事士（正社員）</div>
+        </div>
+        <div class="recruit-table-row">
+          <div class="recruit-table-label">仕事内容</div>
+          <div class="recruit-table-value">工場・ビル・商業施設における電気設備の施工・保守・点検業務</div>
+        </div>
+        <div class="recruit-table-row">
+          <div class="recruit-table-label">応募資格</div>
+          <div class="recruit-table-value">普通自動車免許（必須）<br>電気工事士資格保有者優遇<br>未経験者歓迎</div>
+        </div>
+        <div class="recruit-table-row">
+          <div class="recruit-table-label">勤務地</div>
+          <div class="recruit-table-value">茨城県内の各現場<br>（本社：茨城県○○市）</div>
+        </div>
+        <div class="recruit-table-row">
+          <div class="recruit-table-label">勤務時間</div>
+          <div class="recruit-table-value">8:00〜17:00（休憩60分）</div>
+        </div>
+        <div class="recruit-table-row">
+          <div class="recruit-table-label">休日</div>
+          <div class="recruit-table-value">日曜・祝日・第2,4土曜<br>GW・夏季・年末年始休暇</div>
+        </div>
+        <div class="recruit-table-row">
+          <div class="recruit-table-label">給与</div>
+          <div class="recruit-table-value">月給 ○○万円〜○○万円<br>（経験・資格に応じて優遇）</div>
+        </div>
+        <div class="recruit-table-row">
+          <div class="recruit-table-label">待遇</div>
+          <div class="recruit-table-value">社会保険完備・賞与年2回<br>資格取得支援・退職金制度<br>作業服貸与・交通費支給</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="container">
+    <div class="cta-box">
+      <h2>お問い合わせ・採用応募</h2>
+      <p>施工に関するご相談・採用に関するお問い合わせは、お電話またはメールにてお気軽にご連絡ください。</p>
+      <div class="cta-contacts">
+        <div class="cta-contact-item">
+          <div class="cta-contact-icon">📞</div>
+          <div>
+            <div class="cta-contact-label">お電話でのお問い合わせ</div>
+            <div class="cta-contact-value">0000-00-0000</div>
+          </div>
+        </div>
+        <div class="cta-contact-item">
+          <div class="cta-contact-icon">✉️</div>
+          <div>
+            <div class="cta-contact-label">メールでのお問い合わせ</div>
+            <div class="cta-contact-value">info@oshida-densetsu.co.jp</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="file:///C:/Users/user/Downloads/index_12.html#" class="logo">
+          <div class="logo-icon">忍</div>
+          <div class="logo-text">忍田<span>電設</span></div>
+        </a>
+        <p>TOSHIBA協力会社として、安全と品質を第一に産業インフラを支えます。</p>
+      </div>
+      <div class="footer-col">
+        <h5>事業内容</h5>
+        <a href="file:///C:/Users/user/Downloads/index_12.html#">工場電気設備工事</a>
+        <a href="file:///C:/Users/user/Downloads/index_12.html#">受変電・高圧設備</a>
+        <a href="file:///C:/Users/user/Downloads/index_12.html#">ビル・商業施設</a>
+        <a href="file:///C:/Users/user/Downloads/index_12.html#">制御盤・計装工事</a>
+      </div>
+      <div class="footer-col">
+        <h5>会社情報</h5>
+        <a href="file:///C:/Users/user/Downloads/index_12.html#">会社概要</a>
+        <a href="file:///C:/Users/user/Downloads/index_12.html#">施工実績</a>
+        <a href="file:///C:/Users/user/Downloads/index_12.html#recruit">採用情報</a>
+        <a href="file:///C:/Users/user/Downloads/index_12.html#">お知らせ</a>
+      </div>
+      <div class="footer-col">
+        <h5>お問い合わせ</h5>
+        <a href="file:///C:/Users/user/Downloads/index_12.html#contact">お問い合わせ</a>
+        <a href="file:///C:/Users/user/Downloads/index_12.html#">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 忍田電設（有）</span>
+      <span>〒300-0000 茨城県○○市○○1-2-3</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animation = 'fadeUp 0.7s ease forwards';
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.service-card, .why-item, .recruit-point').forEach((el, i) => {
+  el.style.opacity = '0';
+  el.style.animationDelay = `${i * 0.1}s`;
+  observer.observe(el);
+});
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+
+</body></html>
